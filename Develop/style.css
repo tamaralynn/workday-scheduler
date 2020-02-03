@@ -162,6 +162,13 @@ textarea {
     border-bottom: 10px solid black;
 }
 
+#currentDay {
+    font-size: 20px;
+    margin: 4px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
 .description {
     white-space: pre-wrap;
 }

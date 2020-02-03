@@ -3,11 +3,10 @@ $(document).ready(function() {
     const begHourArr = ["09:00:00", "10:00:00", "11:00:00", "12:00:00", "13:00:00", "14:00:00", "15:00:00", "16:00:00", "17:00:00"];
     const endHourArr = ["10:00:00", "11:00:00", "12:00:00", "13:00:00", "14:00:00", "15:00:00", "16:00:00", "17:00:00", "18:00:00"];
 
-    const todaysDate = $("currentDay").text(moment().format("dddd, MMMM Do YYYY"));
+    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
+
 
     let plannerData = [];
-
-
     const parseLocalStorage = JSON.parse(localStorage.getItem("planner-items"));
     if (parseLocalStorage !== null) {
         plannerData = parseLocalStorage;
@@ -58,6 +57,4 @@ $(document).ready(function() {
         }
     });
 
-
-    getLocalStorage();
 });
