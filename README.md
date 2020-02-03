@@ -10,7 +10,7 @@ If the hour has passed: the input area for that hour displays a gray background 
 ## Files
 index.html - Hypertext markup
 style.css - Style Sheet
-script.js - Vanilla JavaScript
+script.js - JavaScript using jquery
 
 ## Features
 Input: Type text into text area that will later be stored.
