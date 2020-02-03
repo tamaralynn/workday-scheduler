@@ -36,5 +36,7 @@ Press Enter. The local clone will be created.
 #### Display
 [On mobile](www.githubusercontent.com/tamaralynnrenee/workday-scheduler/master/assets/mobile.png)
 
+[Desktop Gif](https://media.giphy.com/media/jVHEzur3X5w31vNXdX/giphy.gif)
+
 [On Desktop](www.githubusercontent.com/tamaralynnrenee/workday-scheduler/master/assets/desktop.png)
 
