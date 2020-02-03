@@ -31,7 +31,7 @@ Press Enter. The local clone will be created.
 [From Github Reopsitory](https://github.com/tamaralynn/workday-scheduler)
 
 ### Deployment
- [Live GitHib Site](https://tamaralynn.io/workday-scheduler)
+ [Live GitHib Site](https://tamaralynn.github.io/workday-scheduler/Develop)
 
 #### Display
 [On mobile](www.githubusercontent.com/tamaralynnrenee/workday-scheduler/master/assets/mobile.png)
