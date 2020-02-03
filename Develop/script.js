@@ -7,45 +7,42 @@ $(document).ready(function() {
 
 
     let plannerData = [];
-
-    //function getLocalStorage() {
-
     const parseLocalStorage = JSON.parse(localStorage.getItem("planner-items"));
     if (parseLocalStorage !== null) {
         plannerData = parseLocalStorage;
-
     }
-    //}
 
     for (let i = 0; i < idHourArr.length; i++) {
-        let hour = $(idHourArr[i]);
+        let textInputEl = $(idHourArr[i]);
         const MMDoYYYYHH = moment().format('MMMM Do YYYY, HH:mm:ss');
         const MMDoYYYY = moment().format('MMMM Do YYYY');
-        const buttonEl = hour.parent().parent().find("button");
+        const buttonEl = textInputEl.parent().parent().find("button");
 
         if ((MMDoYYYYHH) < (MMDoYYYY + ", " + begHourArr[i])) {
-            hour.attr("class", "future");
-            /*plannerData.forEach(function(item) {
+            textInputEl.attr("class", "future");
+            plannerData.forEach(function(item) {
                 if (idHourArr[i] === ("#" + (item["input-hour"]))) {
-                    hour.val(item["input-value"]);
-                }  
-            });*/
+                    textInputEl.val(item["input-value"]);
+                }
+            });
         } else if (((MMDoYYYYHH) >= (MMDoYYYY + ", " + begHourArr[i])) &&
             (MMDoYYYYHH) < (MMDoYYYY + ", " + endHourArr[i])) {
-            hour.attr("class", "present");
+            textInputEl.attr("class", "present");
             $(".present").attr("disabled", "disabled");
             buttonEl.attr("disabled", true);
-            /*plannerData.forEach(function(item) {
-                if (idHourArr[i] === ("#" (item["input-hour"]))) {
-                    hour.val(item["input-value"]);
+            plannerData.forEach(function(item) {
+                if (idHourArr[i] === ("#" + (item["input-hour"]))) {
+                    textInputEl.val(item["input-value"]);
                 }
-            });*/
+            });
+
         } else if ((MMDoYYYYHH) > (MMDoYYYY + ", " + begHourArr[i])) {
-            hour.attr("class", "past");
+            textInputEl.attr("class", "past");
             $(".past").attr("disabled", "disabled");
             buttonEl.attr("disabled", true);
         }
     }
+
 
     $("button").on("click", function() {
         event.preventDefault();
